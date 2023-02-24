@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wordle Game</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <!-- # modalSuccess-dialog -->
+            <div id="app" class="container py-2">
+              <div class="py-2">
+                  <div class="modal" id="modalSuccess">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 id="modal-title" class="modal-title" style="font-weight: bold;">Congratulation!</h5>
+                              </div>
+                              <div class="modal-body">
+                                  <p>Well done, you played a great game!</p>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn-success">Play Again</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- # modalFail-dialog -->
+          <div id="app" class="container py-2">
+              <div class="py-2">
+                  <div class="modal" id="modalFail">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" style="font-weight: bold;">Game Over</h5>
+                              </div>
+                              <div id="newPara" class="modal-body">
+                                  <p>Better luck next time!&nbsp;</p>
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-success">Play Again</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="col-10">
+            <br>
+            <div id="board"></div>
+            <br>
+            <p style="font-weight: bold; color: crimson;" id="answer"></p>
+          </div>
+          <div id="keyBoard"></div>         
+          <div class="col-1">     
+          </div>
+            
+          <div id="keyBoard"></div>
+        </div>
+      </div>
+      <!-- Instruction starts -->
+      <div class="rules">
+        <div class="row">
+          <div class="col-sm">
+            <div class="col">
+              <div class="row">
+                <div class="col-4">
+                  <p class="instruction-title">Rules</p>
+                </div>
+                <div class="col-8">
+                  <p class="instruction-text">
+                    Guess the <b>WORDLE in 6 tries</b>. After each guess, the colour of the tiles will change to show how close your guess was to the word.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="col">
+              <div class="row">
+                <div class="col-4">
+                  <p class="instruction-letter1">A</p>
+                </div>
+                <div class="col-8">
+                  <p class="instruction-text">
+                    in the word and in <b>correct position</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>         
+          <div class="col-sm">
+            <div class="col">
+              <div class="row">
+                <div class="col-4">
+                  <p class="instruction-letter2">B</p>
+                </div>
+                <div class="col-8">
+                  <p class="instruction-text">
+                    Letter in the word but <b>incorrect position</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="col">
+              <div class="row">
+                <div class="col-4">
+                  <p class="instruction-letter3">C</p>
+                </div>
+                <div class="col-8">
+                  <p class="instruction-text">
+                  Letter <b>not in the word</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+        <!-- Instruction ends -->
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous">
+    </script>
+  </body>
+</html>
